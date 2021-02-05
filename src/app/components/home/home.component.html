@@ -1,0 +1,13 @@
+<app-first></app-first>
+<app-second></app-second>
+
+<ul>
+  <li *ngFor="let arrItem of dataArr; let i = index">
+    {{ arrItem }} {{ i + 1 }}
+  </li>
+</ul>
+
+<hr />
+    <p *ngIf="!isElementVisible">jestem widoczny</p>
+    <button (click)="onButtonClick()">Click me!</button>
+<hr />

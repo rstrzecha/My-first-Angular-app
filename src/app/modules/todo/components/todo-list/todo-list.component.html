@@ -1,0 +1,13 @@
+<p>todo-list works!</p>
+
+<!-- <app-todo-item 
+*ngFor = "let name of todoItems"
+[dataFromList]="name"
+>
+</app-todo-item> -->
+
+<app-todo-item 
+    *ngFor = "let todoItemData of todoItems; let i = index;"
+    [dataFromList]="todoItemData"
+    (deleteItem)='onDeleteTodo(i)'>
+</app-todo-item>

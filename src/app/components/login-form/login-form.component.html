@@ -1,0 +1,51 @@
+<p>login-form works!</p>
+
+<form 
+    class="form" 
+    [formGroup]="loginForm"
+    (ngSubmit)="onFormSubmit()"
+
+>
+
+  <h3>Reactive Forms</h3>
+
+  <label for="username">Username</label>
+  <!-- zaznaczenie labelki da podświetlenie danego inputa dzięki temu id -->
+  <div class = "input_box">
+    <input
+    id="username"
+    class="form__input"
+    type="text"
+    placeholder="Enter login"
+    formControlName="username"
+  />
+    <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched" >Please enter valid username</span>
+  </div>
+  
+
+  <div class = "input_box">
+    <label for="password">Password</label>
+    <input
+      id="password"
+      class="form__input"
+      type="password"
+      placeholder="Type password"
+      formControlName="password"
+    />
+    <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" >Please enter valid password</span>
+  </div>
+
+  <div class = "input_box">
+    <label for="age">Your age</label>
+    <input
+      id="age"
+      class="form__input"
+      type="number"
+      placeholder="Choose your age"
+      formControlName="age"
+    />
+    <span *ngIf="!loginForm.get('age').valid && loginForm.get('age').touched" >Please enter valid age</span>
+  </div>
+
+  <button class="form__button">Login</button>
+</form>

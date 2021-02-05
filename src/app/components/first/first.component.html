@@ -1,0 +1,27 @@
+<p>first works!</p>
+
+<app-login-form></app-login-form>
+
+<h3>{{ myName }}</h3>
+<h4>{{ myAge }}</h4>
+<h5>{{ isOld }}</h5>
+
+<img class="hero_img" [src]="myImg" alt="rozmazany kod" />
+
+<button
+  (click)="onButtonClick()"
+  (mouseenter)="onButtonEnter()"
+  (mouseleave)="onButtonLeave()"
+>
+  Click me!
+</button>
+<br />
+<!-- <input [value] = "inputValue"/> -->
+
+<form action="">
+
+  <input [(ngModel)]="inputValue" [ngModelOptions]="{standalone: true}"/>
+  {{ inputValue }}
+  <button (click)="onSubmit()">Submit</button>
+
+</form>

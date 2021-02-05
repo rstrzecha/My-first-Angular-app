@@ -1,0 +1,11 @@
+<!-- <p>{{dataFromList.description}}</p>
+<p>{{dataFromList.id}}</p>
+<p>{{dataFromList.isDone}}</p>
+<p>{{dataFromList.date}}</p> -->
+
+<div>
+    <input type="checkbox" [checked]="dataFromList.isDone"/>
+    <input type="text" [value]="dataFromList.description"/>
+    <span> {{dataFromList.date}} </span>
+    <button (click)="onButtonClick($event)">Delete</button>
+</div>
